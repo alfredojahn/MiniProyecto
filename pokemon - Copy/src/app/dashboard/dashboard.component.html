@@ -1,0 +1,19 @@
+
+<div *ngFor = "let x of pokedex" [class.selected]="x === selectedpokemon"  (cick)="onSelect(x)">
+  <table class="table" style="width:25%" align=center>
+        <tr> 
+          <td>
+            <a routerLink="/pokemons"><img src="{{x.art_url}}" alt="pene"></a>
+          </td>   
+        </tr>
+
+        <tr>
+          <td align=center>
+              #{{x.pkdx_id}}
+              {{x.name}}
+          </td>
+            
+        </tr>
+      
+  </table>
+</div>
